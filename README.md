@@ -33,6 +33,13 @@ How it should work:
   - Takes the English definition attribute and adds that to the english text box subheader 
 6. When the end of the array is reached both text boxes display buttons to add more vocab words 
 
+Implementing the New Method of Adding Words: 
+1. The object data is stored in an array of a single type:
+  - Each array will contain individual words and each array will be saved as a record into local memory (4 records, 1/type)
+  - The data will be serialized from JSON into a record using the JSON method (toJSON)
+  - The data will be deserialized using JSON.parse 
+3. Once data has been pulled from local storage each array will be saved and a new totalArray will all words will be created 
+4. 
 
 
 Targeted HTML Elements

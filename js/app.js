@@ -1,3 +1,4 @@
+/*
 var pos = 0;
 
 // Creates the objects and defines their attributes
@@ -8,7 +9,7 @@ function noun(de_g, de_s, de_p, en) {
   this.en = en;
 }
 
-function verb(de_inf, de_per, de_imper, en) {
+function verb(de_inf, de_per, de_imper, en)~ {
   this.de_inf = de_inf;
   this.de_per = de_per;
   this.de_imper = de_imper;
@@ -34,6 +35,7 @@ var nounArray = [
   new noun("die", "Flasche", "Flaschen", "Bottle"),
   new noun("der", "Fuß", "Füße", "Foot"),
 ];
+
 var verbArray = [
   //verb(de_inf, de_per, de_imper, en)
   new verb("gehen", "gegangen", "ging", "to go"),
@@ -80,6 +82,7 @@ conjunction.prototype.toString = function conjToString() {
 // Adds all array elements together 
 var tArray = nounArray.concat(verbArray, adjArray, conjArray); 
 
+<<<<<<< HEAD
  
 
 
@@ -91,11 +94,18 @@ document.getElementById("deText_3");
 document.getElementById("deText_1");
 
 
+=======
+// pos is the counter token 
+>>>>>>> 76fb6093211f9d2bef83cde3f008ff11ac838c3e
 
 // Event Listener for Next Button 
 document.getElementById("nextBtn").addEventListener("click", next);
 // Event Listener for Next Button 
 document.getElementById("backBtn").addEventListener("click", back);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76fb6093211f9d2bef83cde3f008ff11ac838c3e
 // Event Listener for Next Button 
 document.getElementById("randomBtn").addEventListener("click", random);
 
@@ -103,7 +113,10 @@ document.getElementById("randomBtn").addEventListener("click", random);
 
 // Function to get next object in array and push to text box 
 function next() {
+<<<<<<< HEAD
 	console.log("test");
+=======
+>>>>>>> 76fb6093211f9d2bef83cde3f008ff11ac838c3e
 	document.getElementById("en_text").innerHTML = "test";
 		if(pos < tArray.length) { // Checks to see if end of array is reached
 			document.getElementById("en_text").innerHTML = tArray[pos].en;
@@ -114,6 +127,10 @@ function next() {
 			document.getElementById("de_text").innerHTML = "end of array";
 		}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76fb6093211f9d2bef83cde3f008ff11ac838c3e
 }
 // Function to get previous object in array and push to text box 
 function back() {
@@ -137,6 +154,7 @@ function random() {
 		document.getElementById("en_text").innerHTML = rObj.en;
 		document.getElementById("de_text").innerHTML = rObj;
 
+<<<<<<< HEAD
 }
 
 // Create Varialbes for elements that are being accessed 
@@ -151,7 +169,14 @@ nounForm.addEventListener("submit" , function(event){
 }); 
 
 console.log(nounForm);
+=======
 
+
+}
+
+>>>>>>> 76fb6093211f9d2bef83cde3f008ff11ac838c3e
+
+*/
 
 
 

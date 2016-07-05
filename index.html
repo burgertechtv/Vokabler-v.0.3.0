@@ -1,10 +1,17 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
 </head>
 <body>
 
@@ -15,18 +22,18 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
+          <span class="icon-bar"> </span>
         </button>
         <!-- Brand Name -->
-        <a class="navbar-brand" href="index.html">Vokabler App</a>
+        <a class="navbar-brand" href="index.html">Vokabler App V2.0.0 (alpha)</a>
       </div>
 
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <!-- Home Page -->
-          <li class="active"><a href="index.html">
+          <li class="active"><a href="/index.html">
             <i class="glyphicon glyphicon-home"></i></a>
           </li>
 
@@ -49,36 +56,200 @@
   </br>
   
   <!-- Begin page content -->
-  <div class="container">
     <div class="page-header">
-      <h1>Vokabler</h1>
+      <h1>Vokabler V2.0.0</h1>
+
+      <!-- English - German Subheader -->
+      <h3>English
+      	<span class="glyphicon glyphicon-resize-horizontal"> 
+  		</span> 
+  		German
+  		</h3>
+
+<!-- Tabbed Menu Subheader -->
+      <ul class="nav nav-pills">
+      	<li>
+      		<a href="">Noun</a>
+      	</li>
+        <li class="disabled">
+          <a href="">Verb</a>
+        </li>
+        <li class="disabled">
+          <a href=" ">Adjective</a>
+        </li>
+        <li class="disabled">
+          <a href=" ">Conjunction</a>
+        </li>
+      </ul>
+<!-- End Subhead-->  
+
+  <div id="listInfo" class="container">
+    <div class="row"> 
+    
+    <div class="col-xs-2">  </div>
+
+      <div class="col-xs-4 text-center"> 
+        <p>List Name: "<span id="listName"> </span>"</p>
+      </div>
+
+      <div class="col-xs-4 text-center"> 
+        <p> List Length: <span id="listLength"></span>
+        </p>
+      </div>
+
+      <div class="col-xs-2">  </div>
+
+      </div>
     </div>
+  </div>
   
-		<div class="row">
-			<div 
-      style="background-color:yellow" 
+	<div class="container">
+    <div class="row">
+      <div
+      id="en_text_block" 
       class="col-sm-6 text-center"> 
-				<h1 class="text-center">English</h1>
-				<h2 id ="enText_1">English (1)</h2>
+				<h1 class="displayTitle" id="en_headText" > English 
+          <span id="en_wordType">(Noun)</span>
+        </h1>	
+            
+            <p class="displayWordTitle"> 
+            Definition: <span id="enText_1" class="displayWord"> 
+            </span></p>
 			</div>
 			
-			<div 
-      style="background-color:blue" 
-      class="col-sm-6 text-center"> 
-        <h1 class="text-center">Deutsch</h1>
-				<div id="de_text_lines">
-          <h2 id="deText_1">German (1)</h2>
-          <h2 id="deText_2">German (2)</h2>
-          <h2 id="deText_3">German (3)</h2>    
+      <div id="de_text_block" 
+	      class="col-sm-6 text-center"> 
+	        <h1 class="displayTitle">Deutsch 
+           <span id="de_WordType"> (Nomen)</span>
+          </h1>
+					
+          <div id="de_text_lines">
+	          
+            <!--German Text-->
+            <p class="displayWordTitle"> 
+            Gender: <span id="deText_1" class="displayWord"> 
+            </span></p>
+            
+            <p class="displayWordTitle"> 
+            Singular: <span id="deText_2" class="displayWord"> 
+            </span></p>
+            
+            <p class="displayWordTitle"> 
+            Plural: <span id="deText_3" class="displayWord"> 
+            </span></p>
+                      
+	        </div>
+		</div>
+
+          <div class="text-center">
+        <!-- Next Button-->
+        <button id="backBtn" type="button" class= "btn btn-info"> 
+        <span class="glyphicon glyphicon-arrow-left"> </span>
+      Back                  
+        </button>
+                    
+        <!-- Back Button-->
+        <button id="nextBtn" type="button" class= "btn btn-primary"> 
+      Next<!--Button Text-->
+        <span class="glyphicon glyphicon-arrow-right"> </span>
+        </button>
+                    
+          <!-- Random Button-->
+          <button id="randomBtn" type="button" class= "btn btn-primary"> 
+          <span class="glyphicon glyphicon-fire"> </span>
+        Boom<!--Button Text-->
+          <span class="glyphicon glyphicon-fire"> </span>
+          </button>
+      </div> 
+		
+		</br>
+
+    
+<div class="row">
+  <div class="col-xs-3 col-centered"> </div>
+  <div class="col-xs-6 col-centered"> 
+        <!--ˆˆˆˆˆˆˆˆˆˆˆ|| English Placeholder Text -->  
+<form id="nounForm" class="form-horizontal" role="form">
+        <h1>English</h1>
+        <div class="form-group">
+          <label class="control-label col-sm-2 align-left"  for="email">
+            Definition:</label>
+          <div class="col-sm-12">
+          <!--English Defintion -->
+            <input 
+              type="text" 
+              class="form-control" 
+              id="email" 
+              placeholder="Enter English Word">
+            <!--ˆˆˆˆˆˆˆˆˆˆˆ|| English Placeholder Text -->
+          </div>  
         </div>
-			</div>
-<!--Button Group-->           
-        <div class="text-center">
-          <button id="backBtn" type="button" class= "btn btn-info"> 
-          Last Word</button>
-          <button id="nextBtn" type="button" class= "btn btn-primary"> 
-          Next Word</button>
-        </div> 
+        
+        <!-- GERMAN ENTRY SECTION -->
+        <h1>German</h1>
+        
+        <div class="form-group">
+          <label class="
+              control-label 
+              col-sm-2 
+              align-left" for="pwd">
+            Gender</label>
+          <div class="col-sm-12 radio">
+            <label><input id="genderDer" name="gender" type="radio" value="1">Male: der</label>
+            <label><input id="genderDie" name="gender" type="radio" value="3">Female: die</label>
+            <label><input id="genderDas" name="gender" type="radio" value="2">Neuter: das</label>
+          </div>
+        </div>        
+        <!-- -->
+        <div class="form-group">
+          <label class="control-label col-sm-2 align-left" for="pwd">
+            Singular</label>
+          <div class="col-sm-12">
+            <input 
+              type="text" 
+              class="form-control" 
+              id="pwd" 
+              placeholder="Enter Singular Form of German Word">
+              <!--English Def Placeholder Text -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2 align-left" for="pwd">
+            Plural</label>
+          <div class="col-sm-12">
+            <input 
+              type="text" 
+              class="form-control" 
+              id="pwd" 
+              placeholder="Enter Plural Form of German Word">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="text-center">
+            <button id="nounSubmitBtn" type="submit" class="btn btn-success  btn-default text-center">Submit</button>
+          </div>
+        </div>
+      </form>
+
+
+
+
+  <div class="col-xs-3 col-centered"> </div>
+
+</div>
+
+
+
+
+      <div class="container"> 
+        
+
+
+    </div>
+		
+  <!--Button Group-->           
+      
 
 		</div>
 </div>
@@ -87,10 +258,13 @@
 
 <div id="footer">
   <div class="container">
-    <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+	<p>Developed by Rob Burger <a href="https://github.com/burgertechtv"> @Burgertech </p>
   </div>
 </div>
 
 <script type="text/javascript" src="./js/app.js"></script>
+<script type="text/javascript" src="./js/appv2.js"></script>
+
 </body>
 </html>
+	
